@@ -52,7 +52,7 @@ async function updateTime(timeData) {
         let seconds = (remaining) % 60;
         let minutes = ((remaining - seconds) % 3600) / 60;
         let hours = (remaining - seconds - minutes * 60) / 3600;
-
+        
         let hoursFormatted = formatTime(hours);
         let secondsFormatted = formatTime(seconds);
         let minutesFormatted = formatTime(minutes);
@@ -92,6 +92,10 @@ $('#endpoint-url').keypress(function(e){ return e.which !== 13; });
 
 let endpointUrlElement = document.getElementById('endpoint-url');
 let endpointUpdateButton = document.getElementById('endpoint-update-button');
+
+let latestTimerData = {
+    "endTime": 0
+};
 endpointUpdateButton.addEventListener('click', (event) => {
     var serviceUrl = endpointUrlElement.innerText;
     let rankingData = document.getElementById('ranking-data');
@@ -108,8 +112,12 @@ endpointUpdateButton.addEventListener('click', (event) => {
      * Data Update Service
      */
     setInterval(function () {
+        updateTime(latestTimerData);
+    }, 1000);
+
+    setInterval(function () {
         $.getJSON(serviceUrl, function(data) {
-            updateTime(data['timer']);
+            latestTimerData['endTime'] = data['timer']['endTime'];
             updateTeams(data);
             updateUpNext(data['upNext']);
         });
