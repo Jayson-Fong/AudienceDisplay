@@ -52,7 +52,7 @@ async function updateTime(timeData) {
         let seconds = (remaining) % 60;
         let minutes = ((remaining - seconds) % 3600) / 60;
         let hours = (remaining - seconds - minutes * 60) / 3600;
-        
+
         let hoursFormatted = formatTime(hours);
         let secondsFormatted = formatTime(seconds);
         let minutesFormatted = formatTime(minutes);
