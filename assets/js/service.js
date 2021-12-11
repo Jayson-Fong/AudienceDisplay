@@ -1,3 +1,9 @@
+$(document).ready(function() {
+    $.ajaxSetup({
+        cache: false
+    });
+});
+
 /**
  * Initialize Result Table
  */
@@ -96,8 +102,8 @@ let endpointUpdateButton = document.getElementById('endpoint-update-button');
 let latestTimerData = {
     "endTime": 0
 };
-endpointUpdateButton.addEventListener('click', (event) => {
-    var serviceUrl = endpointUrlElement.innerText;
+endpointUpdateButton.addEventListener('click', () => {
+    const serviceUrl = endpointUrlElement.innerText;
     let rankingData = document.getElementById('ranking-data');
 
     $('#endpoint').remove();
@@ -116,10 +122,15 @@ endpointUpdateButton.addEventListener('click', (event) => {
     }, 1000);
 
     setInterval(function () {
-        $.getJSON(serviceUrl, function(data) {
-            latestTimerData['endTime'] = data['timer']['endTime'];
-            updateTeams(data);
-            updateUpNext(data['upNext']);
+        $.ajax({
+            cache: false,
+            url: serviceUrl,
+            dataType: 'json',
+            success: function(data) {
+                latestTimerData['endTime'] = data['timer']['endTime'];
+                updateTeams(data);
+                updateUpNext(data['upNext']);
+            }
         });
     },1000);
 });
