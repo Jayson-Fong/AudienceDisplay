@@ -126,6 +126,11 @@ endpointUpdateButton.addEventListener('click', () => {
             cache: false,
             url: serviceUrl,
             dataType: 'json',
+            "crossDomain": true,
+            "headers": {
+                "accept": "application/json",
+                "Access-Control-Allow-Origin":"*"
+            },
             success: function(data) {
                 latestTimerData['endTime'] = data['timer']['endTime'];
                 updateTeams(data);
