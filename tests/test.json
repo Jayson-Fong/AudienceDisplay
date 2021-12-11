@@ -1,0 +1,24 @@
+{
+  "timer": {
+    "endTime": 1639194999
+  },
+  "teams": {
+    "12345": {
+      "best": "5",
+      "r1": "1",
+      "r2": "2",
+      "r3": "3",
+      "r4": "4",
+      "r5": "5",
+      "rank": "1"
+    }
+  },
+  "upNext": {
+    "editNumber": 1,
+    "items": [
+      "An Example Up Next Item",
+      "Lunch in the Ballroom",
+      "Awards Ceremony"
+    ]
+  }
+}

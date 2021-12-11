@@ -1,0 +1,57 @@
+<html lang="EN-US">
+    <head>
+        <meta charset="UTF-8" />
+        <link href="assets/css/main.css" rel="stylesheet" />
+        <title>First Lego League</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet" />
+    </head>
+    <main>
+        <div class="container">
+            <div class="vertical-box" id="ranking-vertical-box">
+                <h1>Rankings</h1>
+                <div id="ranking-container">
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>Team</td>
+                            <td>Best</td>
+                            <td>R1</td>
+                            <td>R2</td>
+                            <td>R3</td>
+                            <td>R4</td>
+                            <td>R5</td>
+                            <td>Rank</td>
+                        </tr>
+                        </thead>
+                        <tbody id="ranking-data">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="vertical-box">
+                <div id="timer">
+                    <h3>Time Remaining</h3>
+                    <p id="time-remaining">Loading...</p>
+                </div>
+                <div id="horizontal-separator"></div>
+                <div id="up-next">
+                    <h2>Up Next</h2>
+                    <div id="up-next-list" data-last-edit-id="-1">
+                        <div class="up-next-item">
+                            <p>Loading...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p id="notice">Hosted by Discovery High School in Lawrenceville, GA</p>
+        <span id="endpoint">Endpoint (<span id="endpoint-update-button">X</span>): <span contenteditable="true" id="endpoint-url">XXX</span></span>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/service.js"></script>
+</html>

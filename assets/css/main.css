@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+    background-image: url("../img/FLL_Background_Graphic.png");
+}
+
+main {
+    margin: 2%;
+}
+
+.container {
+    display: flex;
+}
+
+.vertical-box {
+    display: inline-block;
+    margin: 15px;
+    width: 50%;
+}
+
+.vertical-box.score-item {
+    width: auto;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: 900;
+    overflow: scroll;
+}
+
+tr {
+    padding: 5px 0;
+    border: 1px solid #fff;
+}
+
+thead tr:first-of-type {
+    border-bottom: 3px solid #fff;
+}
+
+td {
+    border-right: 1px solid #fff;
+}
+
+td:nth-child(2) {
+    background-color: #07b324;
+}
+
+td:nth-last-child(1) {
+    background-color: #0797f7;
+}
+
+td:last-of-type {
+    border-right: none;
+}
+
+td {
+    padding: 0 5px;
+}
+
+#time-remaining {
+    font-size: 12vh;
+}
+
+#horizontal-separator {
+    border-top: 1px solid white;
+    margin: 5px 0;
+}
+
+#up-next-list {
+    margin-left: 1em;
+}
+
+.up-next-item {
+    padding: 5px;
+}
+
+#notice {
+    bottom: 1vh;
+    left: 1em;
+    position: absolute;
+}
+
+#endpoint {
+    bottom: 1vh;
+    right: 1em;
+    position: absolute;
+}
+
+@media only screen and (max-width: 568px) {
+    #ranking-vertical-box {
+        display: none;
+    }
+
+    .vertical-box {
+        width: 100%;
+    }
+}
