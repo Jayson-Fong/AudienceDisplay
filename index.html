@@ -4,13 +4,14 @@
         <link href="assets/css/main.css" rel="stylesheet" />
         <title>First Lego League</title>
 
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet" />
     </head>
     <main>
         <div class="container">
-            <div class="vertical-box" id="ranking-vertical-box">
+            <div class="vertical-box" id="ranking-vertical-box" style="width: 60%;">
                 <h1>Rankings</h1>
                 <div id="ranking-container">
                     <table>
@@ -31,7 +32,7 @@
                     </table>
                 </div>
             </div>
-            <div class="vertical-box">
+            <div class="vertical-box" style="width: 40%;">
                 <div id="timer">
                     <h3>Time Remaining</h3>
                     <p id="time-remaining">Loading...</p>

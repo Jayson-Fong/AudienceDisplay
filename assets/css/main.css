@@ -49,6 +49,7 @@ thead tr:first-of-type {
 
 td {
     border-right: 1px solid #fff;
+    font-size: 22px;
 }
 
 td:nth-child(2) {
